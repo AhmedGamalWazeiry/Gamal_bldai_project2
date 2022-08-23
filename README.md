@@ -6,7 +6,7 @@ Steps to run the project
 
 2 - open the project with vscode.
 
-3 - opent terminal in vscode.
+3 - open the terminal in vscode.
 
 4 - in the terminal in vscode run this command
 
