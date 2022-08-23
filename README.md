@@ -6,4 +6,6 @@
 
 4 - in the terminal in vscode run this command
 
+- npm install react-scripts
+
 - npm start
