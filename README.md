@@ -1,3 +1,7 @@
+Steps to run the project
+
+---
+
 1 - you must install nodejs and npm
 
 2 - open the project with vscode.
