@@ -1,19 +1,19 @@
-.courses_box {
+.courses-box {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(220, 216, 216);
-  justify-content: flex-start;
+  justify-content: stretch;
   align-items: flex-start;
-  margin: 50px 0 0 5%;
-  width: 90%;
+  border: 1px solid rgb(220, 216, 216);
+  width: 80%;
+  margin-bottom: 50px;
 }
-.courses_title {
+.courses-title {
   display: flex;
   text-align: left;
   width: 85%;
   margin: 30px 0 0 30px;
 }
-.description_box {
+.description-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,13 +21,13 @@
   margin: 10px 0 10px 30px;
   width: 96%;
 }
-.courses_description {
+.courses-description {
   display: flex;
   text-align: left;
   margin-bottom: 15px;
   width: 60%;
 }
-.explore_course {
+.explore-course {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,15 +38,15 @@
   border: 1px solid black;
   white-space: nowrap;
 }
-.explore_course:hover {
+.explore-course:hover {
   background-color: rgb(247, 249, 250, 255);
   cursor: pointer;
 }
-.courses_list {
+.courses-list {
   display: flex;
   width: 100%;
 }
-.courses_container {
+.courses-container {
   display: flex;
   box-sizing: border-box;
   margin: 17px 0 20px 28px;

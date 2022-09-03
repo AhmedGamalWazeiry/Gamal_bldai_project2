@@ -1,11 +1,28 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import Billboard from "./components/Billboard";
 import CoursesList from "./components/CoursesList";
-import { getCourses, getDescription, getTitle } from "./components/db";
+import CoursesTabs from "./components/CoursesTabs";
+import TopContainerCourse from "./components/TopContainerCourse";
+import { getDescription, getTitle } from "./components/db";
+import Footer from "./components/Footer";
+import NavigationBar from "./components/NavigationBar";
+import TopCategories from "./components/TopCategories";
+import SideBarCourse from "./components/SideBarCourse";
+import TopBar from "./components/TopBar";
 
 function App() {
-  // Get array of courses from db.js file.
-  const coursesList = getCourses();
+  const [courses, setCourses] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:3000/courses")
+      .then((res) => res.json())
+      .then((res) => {
+        setCourses(res);
+      });
+  }, []);
+
+  // Get array of courses from db.js file.
   // Get  courses List Description  from db.js file.
   const coursesDescription = getDescription();
 
@@ -14,11 +31,9 @@ function App() {
 
   return (
     <div className="App">
-      <CoursesList
-        coursesList={coursesList}
-        coursesDescription={coursesDescription}
-        coursesTitle={coursesTitle}
-      />
+      <TopBar />
+      <NavigationBar />
+      <TopContainerCourse coursesList={courses} />
     </div>
   );
 }

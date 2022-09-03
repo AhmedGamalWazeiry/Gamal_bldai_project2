@@ -1,13 +1,14 @@
 .course {
   display: flex;
   flex-direction: column;
+  max-width: 355px;
 }
-.course_body {
+.course-body {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.course_title {
+.course-title {
   font-size: 17px;
   font-weight: bold;
   overflow: hidden;
@@ -16,7 +17,7 @@
   text-overflow: ellipsis;
   width: 100%;
 }
-.course_author {
+.course-author {
   color: gray;
   font-size: small;
   margin: 7px 0;
@@ -24,25 +25,25 @@
   width: 100%;
 }
 
-.rating_box {
+.rating-box {
   display: flex;
   justify-items: center;
   align-items: center;
   width: 100%;
 }
-.course_rating {
+.course-rating {
   margin-right: 5px;
   font-weight: bold;
   color: #df941f;
   font-size: 15;
 }
-.course_stars {
+.course-stars {
   display: flex;
   color: orange;
   margin-right: 5px;
   box-sizing: border-box;
 }
-.course_students {
+.course-students {
   color: gray;
   font-size: small;
 }
@@ -50,7 +51,7 @@ i {
   padding: 1px;
   box-sizing: border-box;
 }
-.course_price {
+.course-price {
   text-align: left;
   margin-top: 4px;
   font-size: 17px;
