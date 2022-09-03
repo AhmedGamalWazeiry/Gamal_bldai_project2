@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CoursesList from "./components/CoursesList";
+import { getCourses, getDescription, getTitle } from "./components/db";
 
 function App() {
+  // Get array of courses from db.js file.
+  const coursesList = getCourses();
+
+  // Get  courses List Description  from db.js file.
+  const coursesDescription = getDescription();
+
+  // Get courses List Title from db.js file.
+  const coursesTitle = getTitle();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CoursesList
+        coursesList={coursesList}
+        coursesDescription={coursesDescription}
+        coursesTitle={coursesTitle}
+      />
     </div>
   );
 }
