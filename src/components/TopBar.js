@@ -7,7 +7,7 @@ const TopBar = () => {
     <div className={Style["top-bar"]}>
       <div className={Style["title-box"]}>
         <div className={Style["title"]}>
-          <h7>Learn Python: The Complete Python Programming Course</h7>
+          <h6>Learn Python: The Complete Python Programming Course</h6>
         </div>
         <div className={Style["rating-box"]}>
           <div className={Style["rating"]}>

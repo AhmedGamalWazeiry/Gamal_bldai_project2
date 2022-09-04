@@ -1,0 +1,40 @@
+.overview-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(220, 216, 216);
+  margin: 30px 400px 0 0;
+}
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 20px 10px 25px;
+}
+.overview h1 {
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.overview ul {
+  list-style-type: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.overview ul li {
+  margin-left: -30px;
+  font-size: 14px;
+}
+.overview ul i {
+  margin: 0 15px 10px 0;
+  color: rgb(91, 91, 91);
+}
+
+.image1 {
+  transition: 0.3s;
+  transform: rotate(90deg);
+}
+.image2 {
+  transition: 0.3s;
+  transform: rotate(-90deg);
+}

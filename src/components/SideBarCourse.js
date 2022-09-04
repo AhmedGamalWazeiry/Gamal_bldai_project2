@@ -20,7 +20,7 @@ const SideBarCourse = () => {
           <ul>
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <i className="fa fa-youtube-play" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>
                 4 hours on-demand video
@@ -28,25 +28,25 @@ const SideBarCourse = () => {
             </li>
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fa fa-file-o" aria-hidden="true"></i>
+                <i className="fa fa-file-o" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>1 article</span>
             </li>
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fa fa-download" aria-hidden="true"></i>
+                <i className="fa fa-download" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>downloadable resources</span>
             </li>
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fas fa-infinity" aria-hidden="true"></i>
+                <i className="fas fa-infinity" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>Full lifetime access</span>
             </li>
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <i className="fa fa-mobile" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>
                 Access on mobile and TV
@@ -55,7 +55,7 @@ const SideBarCourse = () => {
 
             <li>
               <span className={Style["item-icon"]}>
-                <i class="fa fa-trophy" aria-hidden="true"></i>
+                <i className="fa fa-trophy" aria-hidden="true"></i>
               </span>
               <span className={Style["item-text"]}>
                 Certificate of completion
