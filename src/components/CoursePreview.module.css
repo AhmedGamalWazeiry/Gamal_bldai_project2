@@ -33,15 +33,17 @@
   left: 100px;
   top: 145px;
 }
+.side-bar-course {
+  z-index: 3;
+}
 .side-bar-course-show {
-  z-index: 2;
+  z-index: 5;
   transition: 0.8s;
   opacity: 1;
   position: fixed;
   top: 20px;
 }
 .side-bar-course-hide {
-  transition: 0.1s;
   opacity: 0;
 }
 

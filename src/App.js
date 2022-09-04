@@ -10,6 +10,7 @@ import NavigationBar from "./components/NavigationBar";
 import TopCategories from "./components/TopCategories";
 import SideBarCourse from "./components/SideBarCourse";
 import TopBar from "./components/TopBar";
+import ShortCutNavigation from "./components/ShortCutNavigation";
 
 function App() {
   const [courses, setCourses] = useState([]);
@@ -34,6 +35,7 @@ function App() {
       <TopBar />
       <NavigationBar />
       <TopContainerCourse coursesList={courses} />
+      <ShortCutNavigation />
     </div>
   );
 }

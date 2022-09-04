@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Style from "./CoursePreview.module.css";
 import SideBarCourse from "./SideBarCourse";
 
@@ -6,9 +6,11 @@ const CoursePreview = () => {
   const [classStyle, setClassStyle] = useState("side-bar-course");
   const [isVisible, setIsVisible] = useState(true);
   const [height, setHeight] = useState(0);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
+    isVisibleRef.current = isVisible;
     return () => window.removeEventListener("scroll", listenToScroll);
   }, [isVisible]);
   const listenToScroll = () => {
@@ -22,10 +24,11 @@ const CoursePreview = () => {
       setIsVisible(false);
       setClassStyle("side-bar-course-hide");
       setTimeout(() => {
-        setClassStyle("side-bar-course-show");
+        isVisibleRef.current
+          ? setClassStyle("side-bar-course")
+          : setClassStyle("side-bar-course-show");
       }, 400);
     }
-    console.log(isVisible);
   };
 
   return (

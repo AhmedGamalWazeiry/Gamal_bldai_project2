@@ -1,0 +1,84 @@
+.container {
+  background-color: white;
+  width: 100%;
+  min-width: 950px;
+  margin: 0;
+  z-index: 0;
+}
+.container-show {
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: none;
+  top: 80px;
+  width: 100%;
+  z-index: 0;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container-hide {
+  width: 100%;
+  opacity: 0;
+}
+.short-cut-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid rgb(220, 216, 216);
+  z-index: 1;
+}
+.short-cut,
+.short-cut-small {
+  display: flex;
+  margin-right: 400px;
+  z-index: 1;
+  width: 638px;
+}
+.short-cut button,
+.short-cut-small button {
+  background-color: white;
+  border: none;
+  width: 160px;
+  height: 51px;
+  font-weight: bold;
+  font-size: 13px;
+  color: slategrey;
+}
+.short-cut button:hover,
+.short-cut-small button:hover {
+  color: black;
+  border-bottom: 2.8px solid black;
+}
+@media screen and (max-width: 1080px) {
+  .short-cut {
+    display: flex;
+    margin-right: 0;
+    margin-left: 130px;
+    z-index: 1;
+  }
+  .short-cut-small {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+  .short-cut-small button {
+    background-color: white;
+    border: none;
+    width: 25%;
+    height: 51px;
+    font-weight: bold;
+    font-size: 13px;
+    color: slategrey;
+  }
+  .short-cut-small button:hover {
+    color: black;
+    border-bottom: 2.8px solid black;
+  }
+  .container-show {
+    top: 0;
+    z-index: 1;
+  }
+}

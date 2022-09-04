@@ -6,12 +6,14 @@
 }
 
 .price-cart-box {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .price-cart {
   display: flex;
+  background-color: white;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -19,6 +21,7 @@
 }
 .real-price {
   display: flex;
+  background-color: white;
   justify-content: flex-start;
   width: 300px;
   font-size: 35px;
