@@ -11,13 +11,7 @@ const Overview = ({ courses }) => {
     const data = courses.courses[0].objectives_summary;
     let lists = [];
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i]);
-      lists.push(
-        <li key={i}>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          {data[i]}
-        </li>
-      );
+      lists.push(<li key={i}>{data[i]}</li>);
     }
     return lists;
   }

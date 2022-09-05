@@ -3,16 +3,17 @@
   width: 100%;
   min-width: 950px;
   margin: 0;
-  z-index: 0;
+  z-index: 10;
 }
 .container-show {
+  z-index: 10;
   position: fixed;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-width: none;
   top: 80px;
   width: 100%;
-  z-index: 0;
+  z-index: 10;
   transition: 0.5s;
   opacity: 1;
 }
@@ -27,13 +28,13 @@
   width: 100%;
   height: 52px;
   border-bottom: 1px solid rgb(220, 216, 216);
-  z-index: 1;
+  z-index: 10;
 }
 .short-cut,
 .short-cut-small {
   display: flex;
   margin-right: 400px;
-  z-index: 1;
+  z-index: 10;
   width: 638px;
 }
 .short-cut button,
@@ -54,9 +55,8 @@
 @media screen and (max-width: 1080px) {
   .short-cut {
     display: flex;
-    margin-right: 0;
-    margin-left: 130px;
-    z-index: 1;
+    margin: 0;
+    z-index: 10;
   }
   .short-cut-small {
     display: flex;
@@ -79,6 +79,14 @@
   }
   .container-show {
     top: 0;
-    z-index: 1;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 580px) {
+  .short-cut {
+    display: flex;
+    margin: 0;
+    margin-left: 150px;
+    z-index: 10;
   }
 }

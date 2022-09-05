@@ -164,6 +164,7 @@
   .top-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     min-width: 950px;
     background: #1c1d1f;
@@ -171,10 +172,11 @@
   .course-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 15px;
-    margin-left: 210px;
+    margin-left: 70px;
   }
   .links-explorer-box {
     display: flex;
@@ -411,5 +413,10 @@
     color: white;
     font-weight: bold;
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .course-info {
+    margin-left: 220px;
   }
 }

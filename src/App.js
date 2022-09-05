@@ -12,6 +12,8 @@ import SideBarCourse from "./components/SideBarCourse";
 import TopBar from "./components/TopBar";
 import ShortCutNavigation from "./components/ShortCutNavigation";
 import Overview from "./components/Overview";
+import CourseContent from "./components/CourseContent";
+import Test from "./components/Test";
 
 function App() {
   const [courses, setCourses] = useState({});
@@ -31,6 +33,8 @@ function App() {
       <TopContainerCourse coursesList={courses} />
       <ShortCutNavigation />
       <Overview courses={courses} />
+      <CourseContent courses={courses.content} />
+      {/* <Test></Test> */}
     </div>
   );
 }
