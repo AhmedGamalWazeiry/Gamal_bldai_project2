@@ -14,6 +14,10 @@ import ShortCutNavigation from "./components/ShortCutNavigation";
 import Overview from "./components/Overview";
 import CourseContent from "./components/CourseContent";
 import Test from "./components/Test";
+import Instructor from "./components/Instructor";
+import InstructorComponent from "./components/InstructorComponent";
+import Review from "./components/Review";
+import ReviewComponent from "./components/ReviewComponent";
 
 function App() {
   const [courses, setCourses] = useState({});
@@ -31,9 +35,11 @@ function App() {
       <TopBar />
       <NavigationBar />
       <TopContainerCourse coursesList={courses} />
-      <ShortCutNavigation />
-      <Overview courses={courses} />
-      <CourseContent courses={courses.content} />
+      <ShortCutNavigation courses={courses} />
+      <InstructorComponent courses={courses.courses} />
+      <ReviewComponent reviews={courses.reviews} />
+      {/* <Overview courses={courses} />
+      <CourseContent courses={courses.content} /> */}
       {/* <Test></Test> */}
     </div>
   );

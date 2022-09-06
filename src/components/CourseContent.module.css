@@ -190,6 +190,9 @@
 .see-more-button:hover {
   background-color: rgb(237, 236, 236);
 }
+.description {
+  white-space: pre-line;
+}
 @media screen and (max-width: 1080px) {
   .content-container {
     display: flex;

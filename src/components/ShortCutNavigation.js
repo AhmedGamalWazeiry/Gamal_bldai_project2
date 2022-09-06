@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
+import CourseContent from "./CourseContent";
+import Overview from "./Overview";
 import Style from "./ShortCutNavigation.module.css";
 
-const ShortCutNavigation = () => {
+const ShortCutNavigation = ({ courses }) => {
   const scollToOverview = useRef();
   const scollToCurriculum = useRef();
   const scollToInstructor = useRef();
@@ -43,38 +45,59 @@ const ShortCutNavigation = () => {
   };
 
   return (
-    <div className={Style[styleContainer]}>
-      <div className={Style["short-cut-box"]}>
-        <div className={Style[styleShortCut]}>
-          <button
-            className={Style["overview-button"]}
-            onClick={() => scollToOverview.current.scrollIntoView()}
-          >
-            Overview
-          </button>
-          <button
-            className={Style["curriculum-button"]}
-            onClick={() => scollToCurriculum.current.scrollIntoView()}
-          >
-            Curriculum
-          </button>
-          <button
-            className={Style["instructor-button"]}
-            onClick={() => scollToInstructor.current.scrollIntoView()}
-          >
-            Instructor
-          </button>
-          <button
-            className={Style["reviews-button"]}
-            onClick={() => scollToReviews.current.scrollIntoView()}
-          >
-            Reviews
-          </button>
+    <>
+      <div className={Style[styleContainer]}>
+        <div className={Style["short-cut-box"]}>
+          <div className={Style[styleShortCut]}>
+            <button
+              className={Style["overview-button"]}
+              onClick={() =>
+                scollToOverview.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "end",
+                  inline: "end",
+                })
+              }
+            >
+              Overview
+            </button>
+            <button
+              className={Style["curriculum-button"]}
+              onClick={() =>
+                scollToCurriculum.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "end",
+                  inline: "end",
+                })
+              }
+            >
+              Curriculum
+            </button>
+            <button
+              className={Style["instructor-button"]}
+              onClick={() => scollToInstructor.current.scrollIntoView()}
+            >
+              Instructor
+            </button>
+            <button
+              className={Style["reviews-button"]}
+              onClick={() => scollToReviews.current.scrollIntoView()}
+            >
+              Reviews
+            </button>
+          </div>
         </div>
+
+        {/* <div ref={scollToReviews}>scroll Me</div> */}
+      </div>
+      <div ref={scollToOverview}>
+        <Overview courses={courses} />
       </div>
 
-      {/* <div ref={scollToReviews}>scroll Me</div> */}
-    </div>
+      <div ref={scollToCurriculum}>
+        <CourseContent courses={courses.content} />
+      </div>
+    </>
   );
 };
 

@@ -194,6 +194,52 @@ const CourseContent = ({ courses }) => {
       </div>
       <div className={Style["sections-box"]}>{getLists()}</div>
       {seeMoreButton()}
+      <div>
+        "Do you want to become a programmer? Do you want to learn how to create
+        games, automate your browser, visualize data, and much more?\n\nIf
+        you’re looking to learn Python for the very first time or need a quick
+        brush-up, this is the course for you!\n\nPython has rapidly become one
+        of the most popular programming languages around the world. Compared to
+        other languages such as Java or C++, Python consistently outranks and
+        outperforms these languages in demand from businesses and job
+        availability. The average Python developer makes over $100,000 - this
+        number is only going to grow in the coming years.\n\nThe best part?
+        Python is one of the easiest coding languages to learn right now. It
+        doesn’t matter if you have no programming experience or are unfamiliar
+        with the syntax of Python. By the time you finish this course, you'll be
+        an absolute pro at programming!\n\nThis course will cover all the basics
+        and several advanced concepts of Python. We’ll go over:\n\nThe
+        fundamentals of Python programming\n\nWriting and Reading to
+        Files\n\nAutomation of Word and Excel Files\n\nWeb scraping with
+        BeautifulSoup4\n\nBrowser automation with Selenium\n\nData Analysis and
+        Visualization with MatPlotLib\n\nRegex parsing and Task
+        Management\n\nGUI and Gaming with Tkinter\n\nAnd much more!\n\nIf you
+        read the above list and are feeling a bit confused, don’t worry! As an
+        instructor and student on Udemy for almost 4 years, I know what it’s
+        like to be overwhelmed with boring and mundane. I promise you’ll have a
+        blast learning the ins and outs of python. I’ve successfully taught over
+        200,000+ students from over 200 countries jumpstart their programming
+        journeys through my courses.\n\nHere’s what some of my students have to
+        say:\n\n“I wish I started programming at a younger age like Avi. This
+        Python course was excellent for those that cringe at the thought of
+        starting over from scratch with attempts to write programs once again.
+        Python is a great building language for any beginner programmer. Thank
+        you Avi!”\n\n\n\n\n“I had no idea about any programming language. With
+        Avi's lectures, I'm now aware of several python concepts and I'm
+        beginning to write my own programs. Avi is crisp and clear in his
+        lectures and it is easy to catch the concepts and the depth of it
+        through his explanations. Thanks, Avi for the wonderful course, You're
+        awesome! It's helping me a lot :)”\n\n\n\n\n\"Videos are short and
+        concise and well-defined in their title, this makes them easy to refer
+        back to when a refresher is needed. Explanations aren't convoluted with
+        complicated examples, which adds to the quick pace of the videos. I am
+        very pleased with the decision to enroll in this course. Not only has it
+        increased the pace I'm learning Python but I actively look forward to
+        continuing the course, whenever I get the chance. Avi is friendly and
+        energetic, absolutely delightful as an instructor.”\n\nSo what are you
+        waiting for? Jumpstart your programming journey and dive into the world
+        of Python by enrolling in this course today!"
+      </div>
     </div>
   );
 };

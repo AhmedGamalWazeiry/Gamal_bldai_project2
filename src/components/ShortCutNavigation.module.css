@@ -52,6 +52,9 @@
   color: black;
   border-bottom: 2.8px solid black;
 }
+.ref-course-content {
+  height: 50px;
+}
 @media screen and (max-width: 1080px) {
   .short-cut {
     display: flex;
