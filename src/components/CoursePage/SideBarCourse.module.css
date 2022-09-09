@@ -1,0 +1,147 @@
+.side-bar-container {
+  background-color: white;
+  width: 350px;
+  height: 685px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.price-cart-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.price-cart {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.real-price {
+  display: flex;
+  background-color: white;
+  justify-content: flex-start;
+  width: 300px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.button-cart {
+  width: 300px;
+  height: 50px;
+  background-color: #983cda;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.button-buy {
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  font-weight: bold;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.button-cart:hover {
+  background-color: #832dc1;
+}
+.button-buy:hover {
+  background-color: rgb(237, 236, 236);
+}
+.money-back {
+  font-size: small;
+  margin-bottom: 25px;
+}
+.course-content-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.course-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.title-list {
+  width: 300px;
+  margin-bottom: 5px;
+}
+.course-content ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 300px;
+  list-style-type: none;
+}
+.course-content ul li {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0 0 -37px;
+  width: 100%;
+}
+.item-icon {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-right: 10px;
+}
+.item-text {
+  width: 100%;
+  white-space: nowrap;
+}
+.cart-links-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cart-links {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 30px;
+}
+.cart-links a {
+  white-space: nowrap;
+  text-underline-position: under;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  font-size: 14px;
+}
+.cart-links a:hover {
+  color: black;
+}
+.udemy-business-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgb(208, 208, 208);
+}
+.udemy-business {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.udemy-business h5,
+.udemy-business p {
+  width: 300px;
+}
+.button-udemy-business {
+  width: 300px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+.button-udemy-business:hover {
+  background-color: rgb(237, 236, 236);
+}
