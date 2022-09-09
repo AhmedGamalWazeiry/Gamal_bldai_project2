@@ -57,13 +57,14 @@
   border-radius: 50%;
   width: 43px;
   height: 43px;
+  border: 0.5px solid black;
   font-size: 20px;
 }
 .like-dislike-button-liked {
   background-color: #1c1d1f;
   color: white;
   border-radius: 50%;
-  border: 0.5px solid black;
+
   width: 43px;
   height: 43px;
   font-size: 20px;
