@@ -98,3 +98,6 @@ input {
   border: 0.5px solid black;
   outline: none;
 }
+.overview-button {
+  border: none;
+}

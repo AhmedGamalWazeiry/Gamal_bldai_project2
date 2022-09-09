@@ -55,12 +55,13 @@ const CourseContent = ({ content }) => {
         <div className={Style["details"]}>
           <span>
             {content.curriculum_context.data.num_of_published_lectures} lectures
+            •
           </span>
-          <div className={Style["point"]}>.</div>
+
           <span>
-            {content.curriculum_context.data.sections.length} sections
+            {content.curriculum_context.data.sections.length} sections •
           </span>
-          <div className={Style["point"]}>.</div>
+
           <span>
             {convertTime(
               content.curriculum_context.data.estimated_content_length_text
@@ -68,16 +69,18 @@ const CourseContent = ({ content }) => {
             total length
           </span>
         </div>
-        <button
-          className={Style["expand-collapse-button"]}
-          onClick={() => {
-            expnadAllOrCollapseAll(
-              content.curriculum_context.data.sections.length
-            );
-          }}
-        >
-          {collapseState} all sections
-        </button>
+        <div className={Style["expand-collapse-button-box"]}>
+          <button
+            className={Style["expand-collapse-button"]}
+            onClick={() => {
+              expnadAllOrCollapseAll(
+                content.curriculum_context.data.sections.length
+              );
+            }}
+          >
+            {collapseState} all sections
+          </button>
+        </div>
       </div>
     );
   }
@@ -157,20 +160,24 @@ const CourseContent = ({ content }) => {
               )
             }
           >
-            <img
-              src={require("../../images/arrow-collapse.png")}
-              alt="arrow-collapse"
-              className={Style["image"]}
-              ref={setImagesReferences}
-            />
+            <div className={Style["image-box"]}>
+              <img
+                src={require("../../images/arrow-collapse.png")}
+                alt="arrow-collapse"
+                className={Style["image"]}
+                ref={setImagesReferences}
+              />
+            </div>
+
             <span className={Style["lectures-title"]}>{section.title}</span>
-            <span className={Style["lectures-count"]}>
-              {section.lecture_count} lectures
-            </span>
-            <div className={Style["point-lectures"]}>.</div>
-            <span className={Style["lectures-time"]}>
-              {convertTime(section.content_length_text)}
-            </span>
+            <div className={Style["lectures-details"]}>
+              <span className={Style["lectures-count"]}>
+                {section.lecture_count}
+              </span>
+              <span className={Style["lectures-time"]}>
+                {"lectures •  " + convertTime(section.content_length_text)}
+              </span>
+            </div>
           </button>
           <div className={Style["hide"]} ref={setSectionsReferences}>
             {getLectures(section)}

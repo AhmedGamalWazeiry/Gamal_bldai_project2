@@ -15,11 +15,8 @@ const CoursesList = ({ coursesList, coursesDescription, coursesTitle }) => {
         return <Course key={course.id} course={course} />;
       }
     });
-    let list = [];
-    for (let i = 0; i < 5; i++) {
-      list.push(courses[i]);
-    }
-    return list;
+
+    return courses;
   }
   return (
     <div className={CourseStyle["courses-box"]}>

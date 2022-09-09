@@ -13,13 +13,18 @@ const ShortCutNavigation = ({ course, content, reviews }) => {
   const [styleContainer, setStyleContainer] = useState("container");
   const [styleShortCut, setStyleShortCut] = useState("short-cut");
   const [isVisible, setIsVisible] = useState(true);
-  const timerRef = useRef(null);
   const isVisibleRef = useRef(false);
-
+  isVisibleRef.current = isVisible;
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    isVisibleRef.current = isVisible;
-    return () => window.removeEventListener("scroll", listenToScroll);
+
+    // in case of change width only
+    window.addEventListener("resize", listenToScroll);
+
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+      window.addEventListener("resize", listenToScroll);
+    };
   }, [isVisible]);
 
   const listenToScroll = () => {
@@ -28,6 +33,7 @@ const ShortCutNavigation = ({ course, content, reviews }) => {
     const isMatch = window.matchMedia(`(max-width: 1080px)`);
     let scrollPositon = 0;
     isMatch.matches ? (scrollPositon = 1100) : (scrollPositon = 400);
+
     if (winScroll < scrollPositon) {
       setIsVisible(true);
       setStyleContainer("container");
@@ -43,6 +49,9 @@ const ShortCutNavigation = ({ course, content, reviews }) => {
           ? setStyleContainer("container")
           : setStyleContainer("container-show");
       }, 400);
+    } else if (isMatch.matches && styleShortCut === "short-cut") {
+      console.log(isMatch.matches + " " + styleShortCut);
+      setStyleShortCut("short-cut-small");
     }
   };
 

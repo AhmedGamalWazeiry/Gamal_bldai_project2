@@ -6,23 +6,14 @@ const CoursePreview = ({ course }) => {
   const [classStyle, setClassStyle] = useState("side-bar-course");
   const [isVisible, setIsVisible] = useState(true);
   const isVisibleRef = useRef(false);
-
+  isVisibleRef.current = isVisible;
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    isVisibleRef.current = isVisible;
     return () => window.removeEventListener("scroll", listenToScroll);
   });
   const listenToScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-    // if (winScroll >= 3190) {
-    //   setClassStyle("side-bar-course-show-fixed");
-    //   return;
-    // } else {
-    //   if (classStyle === "side-bar-course-show-fixed") {
-    //     setIsVisible(true);
-    //   }
-    // }
     if (winScroll < 400) {
       setIsVisible(true);
       setClassStyle("side-bar-course");
@@ -30,7 +21,7 @@ const CoursePreview = ({ course }) => {
       setIsVisible(false);
       setClassStyle("side-bar-course-hide");
       setTimeout(() => {
-        !isVisibleRef.current && !winScroll < 3190
+        !isVisibleRef.current
           ? setClassStyle("side-bar-course-show")
           : setClassStyle("side-bar-course");
       }, 400);
@@ -40,10 +31,7 @@ const CoursePreview = ({ course }) => {
   return (
     <div className={Style["course-preview-box"]}>
       <div className={Style["course-preview"]}>
-        <img
-          className={Style["course-image"]}
-          src={require("../../images/Course-1.jpg")}
-        ></img>
+        <img className={Style["course-image"]} src={course.image_240x135}></img>
         <img
           className={Style["play-course-image"]}
           src={require("../../images/video-play.png")}

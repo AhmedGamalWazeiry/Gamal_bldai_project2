@@ -11,7 +11,6 @@ const ShortCutNavigation = ({ courses }) => {
   const [styleContainer, setStyleContainer] = useState("container");
   const [styleShortCut, setStyleShortCut] = useState("short-cut");
   const [isVisible, setIsVisible] = useState(true);
-  const timerRef = useRef(null);
   const isVisibleRef = useRef(false);
 
   useEffect(() => {
@@ -87,8 +86,6 @@ const ShortCutNavigation = ({ courses }) => {
             </button>
           </div>
         </div>
-
-        {/* <div ref={scollToReviews}>scroll Me</div> */}
       </div>
       <div ref={scollToOverview}>
         <Overview courses={courses} />
