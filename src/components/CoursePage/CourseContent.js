@@ -11,7 +11,7 @@ function convertTime(time) {
   } else {
     relpaced = time.substring(0, 2);
     let timeInt = parseInt(relpaced);
-    if (time[3] != "0" || time[4] != "0") timeInt++;
+    if (time[3] !== "0" || time[4] !== "0") timeInt++;
     relpaced = timeInt + "min";
   }
 
@@ -139,7 +139,7 @@ const CourseContent = ({ content }) => {
       refImagesList.current.push(ref);
   };
   function getLists() {
-    if (content == undefined) return [];
+    if (content === undefined) return [];
     let lists = [];
     if (sectionsNumbers > content.curriculum_context.data.sections.length) {
       setSectionsNumbers(content.curriculum_context.data.sections.length);
@@ -148,7 +148,6 @@ const CourseContent = ({ content }) => {
 
     for (let i = 0; i < sectionsNumbers; i++) {
       const section = content.curriculum_context.data.sections[i];
-      const id = "index" + i;
       lists.push(
         <div key={i} className={Style["sections"]}>
           <button
@@ -188,7 +187,7 @@ const CourseContent = ({ content }) => {
     return lists;
   }
   function seeMoreButton() {
-    if (content == undefined) return [];
+    if (content === undefined) return [];
     if (content.curriculum_context.data.sections.length > 10 && !seeMore)
       return (
         <button
