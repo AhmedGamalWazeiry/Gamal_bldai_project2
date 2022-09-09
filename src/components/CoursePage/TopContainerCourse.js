@@ -9,10 +9,14 @@ const TopContainerCourse = ({ course }) => {
     let instructorsList = [];
     for (let i = 0; i < course.visible_instructors.length; i++) {
       instructorsList.push(
-        <a href="#">{course.visible_instructors[i].display_name}</a>
+        <a key={i} href="#">
+          {course.visible_instructors[i].display_name}
+        </a>
       );
       if (i !== course.visible_instructors.length - 1) {
-        instructorsList.push(<span> ,</span>);
+        instructorsList.push(
+          <span key={i + course.visible_instructors.length}> ,</span>
+        );
       }
     }
     return instructorsList;

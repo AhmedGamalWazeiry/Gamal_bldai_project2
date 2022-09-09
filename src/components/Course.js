@@ -30,10 +30,12 @@ const Course = ({ course }) => {
     let instructorsList = [];
     for (let i = 0; i < course.visible_instructors.length; i++) {
       instructorsList.push(
-        <span>{course.visible_instructors[i].display_name}</span>
+        <span key={i}>{course.visible_instructors[i].display_name}</span>
       );
       if (i !== course.visible_instructors.length - 1) {
-        instructorsList.push(<span>,</span>);
+        instructorsList.push(
+          <span key={i + course.visible_instructors.length}>,</span>
+        );
       }
     }
     return instructorsList;

@@ -3,43 +3,47 @@ import Style from "./ReviewComponent.module.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import { SetStars } from "../helperFunctions";
 import Review from "./Review";
-const ratingPercentageList = [];
-const ratingPercentageMap = new Map();
+
 let search = "";
-
-function calculatePercentage(reviews) {
-  if (reviews == undefined) return;
-  const review = reviews;
-  for (let i = 1; i <= 5; i++) {
-    ratingPercentageMap.set(i, 0);
-  }
-  for (let i = 0; i < review.length; i++) {
-    const rate = Math.ceil(review[i].rating);
-    const usersNumber = ratingPercentageMap.get(rate);
-    ratingPercentageMap.set(rate, usersNumber + 1);
-  }
-  for (let i = 1; i <= 5; i++) {
-    const rating = ratingPercentageMap.get(i) / review.length;
-
-    ratingPercentageList.push(Math.floor(rating * 100));
-  }
-}
+let ratingPercentageList = [];
+let ratingPercentageMap = new Map();
 
 const ReviewComponent = ({ reviews }) => {
   const closeButtonRef = useRef(null);
   const StarsRefList = useRef([]);
   const seeMoreRef = useRef(null);
   const selctingFormRef = useRef(null);
+  const [ratingPercentageListLength, setRatingPercentageListLength] =
+    useState(0);
   const [seeMore, setSeeMore] = useState(5);
   const [rate, setRate] = useState(6);
   const [renderSearch, setRenderSearch] = useState(false);
   StarsRefList.current = [];
 
   useEffect(() => {
-    if (ratingPercentageList.length === 0) {
-      calculatePercentage(reviews);
+    ratingPercentageList = [];
+    ratingPercentageMap.clear();
+    calculatePercentage();
+  }, [ratingPercentageListLength]);
+
+  function calculatePercentage() {
+    if (reviews == undefined) return;
+    const review = reviews;
+    for (let i = 1; i <= 5; i++) {
+      ratingPercentageMap.set(i, 0);
     }
-  }, []);
+    for (let i = 0; i < review.length; i++) {
+      const rate = Math.ceil(review[i].rating);
+      const usersNumber = ratingPercentageMap.get(rate);
+      ratingPercentageMap.set(rate, usersNumber + 1);
+    }
+    for (let i = 1; i <= 5; i++) {
+      const rating = ratingPercentageMap.get(i) / review.length;
+      ratingPercentageList.push(Math.floor(rating * 100));
+    }
+    setRatingPercentageListLength(ratingPercentageList.length);
+  }
+
   const setStarsReferences = (ref) => {
     if (ref && !StarsRefList.current.includes(ref))
       StarsRefList.current.push(ref);
@@ -309,7 +313,6 @@ const ReviewComponent = ({ reviews }) => {
         onClick={handleSeeMoreButton}
       >
         See more reviews
-        {calculatePercentage(reviews)}
       </button>
     </div>
   );
