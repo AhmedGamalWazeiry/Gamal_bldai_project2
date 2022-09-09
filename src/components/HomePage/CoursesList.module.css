@@ -3,10 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   border: 1px solid rgb(220, 216, 216);
-  width: 80%;
+  width: 90%;
+  margin: 50px 0 50px 5%;
   padding: 30px;
-  margin-bottom: 50px;
 }
 .courses-title {
   display: flex;
@@ -44,11 +45,15 @@
 }
 
 .courses-container {
-  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 17px 0 20px 0px;
+  width: 98%;
+  padding: 0;
 }
 .courses-list {
   display: flex;
-  justify-content: space-between;
-
   width: 100%;
+  margin: 0;
+  padding-left: 0;
 }

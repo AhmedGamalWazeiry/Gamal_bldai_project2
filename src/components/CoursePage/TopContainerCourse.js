@@ -12,7 +12,7 @@ const TopContainerCourse = ({ course }) => {
         <a href="#">{course.visible_instructors[i].display_name}</a>
       );
       if (i !== course.visible_instructors.length - 1) {
-        instructorsList.push(<span>,</span>);
+        instructorsList.push(<span> ,</span>);
       }
     }
     return instructorsList;

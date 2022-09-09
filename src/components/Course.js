@@ -26,39 +26,52 @@ const Course = ({ course }) => {
     popUpRef.current.className = Style["pop-up-hide"];
     setStyleImage("course-img");
   };
+  const getInstructors = () => {
+    let instructorsList = [];
+    for (let i = 0; i < course.visible_instructors.length; i++) {
+      instructorsList.push(
+        <span>{course.visible_instructors[i].display_name}</span>
+      );
+      if (i !== course.visible_instructors.length - 1) {
+        instructorsList.push(<span>,</span>);
+      }
+    }
+    return instructorsList;
+  };
   return (
     <>
       <div
-        className={Style["course"]}
+        className={`col ${Style["course"]}`}
         onMouseEnter={pointerInside}
         onMouseLeave={pointerOutSide}
         ref={courseRef}
-        onClick={() => {
-          navigate(course.url);
-        }}
       >
-        <div className={Style[styleImage]}>
-          <img src={course.image_480x270}></img>
-        </div>
-
-        <div className={Style["course-body"]}>
-          <h4 className={Style["course-title"]}>{course.title}</h4>
-          <p className={Style["course-author"]}>
-            {course.visible_instructors[0].display_name}
-          </p>
-          <div className={Style["rating-box"]}>
-            <span className={Style["course-rating"]}>
-              {Math.ceil(course.rating)}
-            </span>
-            <div className={Style["course-stars"]}>
-              {SetStars(course.rating)}
-            </div>
-            <span className={Style["course-students"]}>
-              ({course.num_subscribers})
-            </span>
+        <button
+          className={Style["course-button"]}
+          onClick={() => {
+            navigate(course.url);
+          }}
+        >
+          <div className={Style[styleImage]}>
+            <img src={course.image_240x135}></img>
           </div>
-          <h4 className={Style["course-price"]}>{course.price}</h4>
-        </div>
+          <div className={Style["course-body"]}>
+            <h4 className={Style["course-title"]}>{course.title}</h4>
+            <p className={Style["course-author"]}>{getInstructors()}</p>
+            <div className={Style["rating-box"]}>
+              <span className={Style["course-rating"]}>
+                {Math.ceil(course.rating)}
+              </span>
+              <div className={Style["course-stars"]}>
+                {SetStars(course.rating)}
+              </div>
+              <span className={Style["course-students"]}>
+                ({course.num_subscribers})
+              </span>
+            </div>
+            <h4 className={Style["course-price"]}>{course.price}</h4>
+          </div>
+        </button>
         <div
           style={{
             position: "absolute",

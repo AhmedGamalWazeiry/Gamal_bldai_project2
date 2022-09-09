@@ -1,32 +1,23 @@
 .course {
   display: flex;
   flex-direction: column;
-  max-width: 230px;
-  padding: 0;
-  box-sizing: border-box;
 }
-.course:hover {
-  cursor: pointer;
+.course-button {
+  background-color: white;
+  border: none;
 }
-
 .course-img {
-  width: 210px;
-  height: 120px;
-  border: 1px solid rgb(220, 216, 216);
+  width: 100%;
 }
 .course-img-hide {
-  border: 1px solid rgb(220, 216, 216);
+  width: 100%;
   background-color: rgb(61, 61, 61);
-  width: 210px;
-  height: 120px;
 }
 .course-img img {
-  width: 210px;
-  height: 120px;
+  width: 100%;
 }
 .course-img-hide img {
-  width: 210px;
-  height: 120px;
+  width: 100%;
   opacity: 0.5;
 }
 .course-body {
@@ -35,11 +26,19 @@
   width: 100%;
 }
 .course-title {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 17px;
   font-weight: bold;
-  overflow: hidden;
   margin: 10px 0 0 0;
   width: 100%;
+  padding: 0;
 }
 .course-author {
   color: gray;

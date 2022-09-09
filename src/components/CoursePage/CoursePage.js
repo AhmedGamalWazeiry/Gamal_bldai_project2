@@ -31,7 +31,6 @@ const CoursePage = ({ courses }) => {
       <NavigationBar />
       <TopContainerCourse course={course} />
       <ShortCutNavigation course={course} content={content} reviews={reviews} />
-
       <Brands />
       <Footer />
     </>

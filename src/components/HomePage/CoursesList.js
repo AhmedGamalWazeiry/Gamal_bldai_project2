@@ -30,8 +30,10 @@ const CoursesList = ({ coursesList, coursesDescription, coursesTitle }) => {
         </p>
         <div className={CourseStyle["explore-course"]}>Explore Python</div>
       </div>
-      <div className={CourseStyle["courses-container"]}>
-        <div className={CourseStyle["courses-list"]}>
+      <div className={`container-fluid ${CourseStyle["courses-container"]}`}>
+        <div
+          className={`row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 ${CourseStyle.courses_list}`}
+        >
           {getCoursesComponents(coursesList)}
         </div>
       </div>
