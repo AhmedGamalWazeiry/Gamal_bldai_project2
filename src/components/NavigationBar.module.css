@@ -1,0 +1,192 @@
+.allpage-header {
+  display: flex;
+  z-index: 10;
+  background-color: white;
+  align-items: center;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.link-udemybusiness {
+  margin: 5px;
+}
+.link-teachonudemy {
+  margin: 5px;
+}
+.link-categories {
+  margin: 5px;
+}
+.link-cart {
+  margin: 5px;
+}
+.nav-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.links-nav-body {
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+.links-nav-body:hover {
+  color: #6b3fd5;
+}
+
+.logo {
+  width: 90px;
+  height: 35px;
+  margin: 20px;
+}
+.search-bar {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 800px;
+  width: 70%;
+  height: 47px;
+  margin: 5px 0 5px 5px;
+}
+.search-bar input {
+  border: solid black 1px;
+  border-left: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  outline: none;
+  width: 800px;
+  width: 90%;
+  height: 47px;
+  background: rgb(247, 249, 250, 255);
+}
+.search-bar input[type="text"] {
+  padding: 5px;
+}
+.search-bar button {
+  border: solid black 1px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: none;
+  padding-left: 15px;
+  font-size: 24px;
+  background: rgb(247, 249, 250, 255);
+  cursor: pointer;
+}
+.language-icon {
+  width: 20px;
+}
+.cart-icon {
+  width: 25px;
+}
+.link-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  min-width: 40px;
+}
+.link-language:hover {
+  background-color: rgb(247, 249, 250, 255);
+}
+.link-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  min-width: 80px;
+  height: 40px;
+  font-weight: bold;
+  border: 1px solid black;
+  margin: 5px;
+}
+.link-nav-body-login {
+  text-decoration: none;
+  color: black;
+}
+.link-login:hover {
+  color: black;
+  background-color: rgb(247, 249, 250, 255);
+}
+.link-login span {
+  color: black;
+}
+.link-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  min-width: 80px;
+  height: 40px;
+  font-weight: bold;
+  border: 1px solid black;
+  background: black;
+  margin: 5px 10px 5px 5px;
+}
+.link-nav-body-signup,
+.link-nav-body-signup span {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1080px) {
+  .link-udemybusiness {
+    margin: 5px;
+    display: none;
+  }
+}
+@media screen and (max-width: 920px) {
+  .link-teachonudemy {
+    margin: 5px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .link-menu,
+  .link-search {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .search-bar,
+  .link-categories,
+  .link-udemybusiness,
+  .link-teachonudemy,
+  .link-login,
+  .link-signup,
+  .link-language {
+    display: none;
+  }
+  .nav-body {
+    padding-right: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 5px 0;
+    min-width: 720px;
+    background-color: white;
+  }
+  .link-cart {
+    order: 3;
+    margin-right: 15px;
+  }
+  .link-menu {
+    order: 0;
+    flex-grow: 1;
+    margin: 20px;
+  }
+  .link-search {
+    font-size: 18px;
+    order: 1;
+    flex-grow: 1;
+  }
+  .link-logo {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 20;
+  }
+}
