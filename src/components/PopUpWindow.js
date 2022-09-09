@@ -29,7 +29,7 @@ const PopUpWindow = ({ course }) => {
     if (isLoading) {
       return (
         <div className={`spinner-border ${Style["loader"]}`} role="status">
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       );
     } else {
