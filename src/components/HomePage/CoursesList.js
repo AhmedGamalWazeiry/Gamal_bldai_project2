@@ -2,11 +2,11 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import Course from "../Course";
 import CourseStyle from "./CoursesList.module.css";
+import Placeholder from "react-bootstrap/Placeholder";
 const CoursesList = ({ coursesList, coursesDescription, coursesTitle }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function getCoursesComponents(coursesList) {
-    if (coursesList === undefined) return [];
     let filter = searchParams.get("query");
     if (filter === null) filter = "";
     let courses = [];
@@ -25,15 +25,25 @@ const CoursesList = ({ coursesList, coursesDescription, coursesTitle }) => {
         <p className={CourseStyle["courses-description"]}>
           {coursesDescription}
         </p>
-        <div className={CourseStyle["explore-course"]}>Explore Python</div>
+        {coursesList === undefined ? null : (
+          <div className={CourseStyle["explore-course"]}>Explore Python</div>
+        )}
       </div>
-      <div className={`container-fluid ${CourseStyle["courses-container"]}`}>
-        <div
-          className={`row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 ${CourseStyle.courses_list}`}
-        >
-          {getCoursesComponents(coursesList)}
+      {coursesList === undefined ? (
+        <div className={CourseStyle["placeholder"]}>
+          <Placeholder as="p" animation="glow">
+            <Placeholder xs={12} />
+          </Placeholder>
         </div>
-      </div>
+      ) : (
+        <div className={`container-fluid ${CourseStyle["courses-container"]}`}>
+          <div
+            className={`row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 ${CourseStyle.courses_list}`}
+          >
+            {getCoursesComponents(coursesList)}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
