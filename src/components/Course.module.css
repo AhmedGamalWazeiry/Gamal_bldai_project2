@@ -1,7 +1,7 @@
 .course {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 260px;
 }
 .course-button {
   background-color: white;
