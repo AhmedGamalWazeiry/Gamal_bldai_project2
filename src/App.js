@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
 import CoursePage from "./components/CoursePage/CoursePage";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
   const [courses, setCourses] = useState({});
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage courses={courses} />} />
         <Route

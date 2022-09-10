@@ -28,7 +28,6 @@ const CoursePage = ({ courses }) => {
   return (
     <>
       <TopBar />
-      <NavigationBar />
       <TopContainerCourse course={course} />
       <ShortCutNavigation course={course} content={content} reviews={reviews} />
       <Brands />

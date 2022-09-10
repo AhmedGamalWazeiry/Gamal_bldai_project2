@@ -9,7 +9,6 @@ import TopCategories from "./TopCategories";
 const HomePage = ({ courses }) => {
   return (
     <>
-      <NavigationBar />
       <Billboard />
       <CoursesTabs />
       <CoursesList

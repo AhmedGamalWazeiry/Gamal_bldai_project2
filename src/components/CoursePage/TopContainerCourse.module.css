@@ -3,6 +3,8 @@
   justify-content: flex-start;
   width: 100%;
   background: #1c1d1f;
+  min-width: 900px;
+  margin-left: auto;
 }
 .course-info {
   display: flex;
@@ -166,7 +168,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-width: 950px;
+
     background: #1c1d1f;
   }
   .course-info {
@@ -416,7 +418,4 @@
   }
 }
 @media screen and (max-width: 580px) {
-  .course-info {
-    margin-left: 220px;
-  }
 }
