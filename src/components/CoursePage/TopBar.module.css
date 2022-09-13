@@ -1,0 +1,193 @@
+@media screen and (min-width: 1080px) {
+  .top-bar {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80px;
+    background-color: #1c1d1f;
+    width: 100%;
+  }
+  .order-button-box {
+    display: none;
+  }
+}
+.title-box {
+  width: 50%;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  color: white;
+  margin: 15px 0 2px 25px;
+}
+.title h6 {
+  width: 668px;
+  white-space: nowrap;
+  font-weight: bolder;
+  margin: 0;
+}
+.rating-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 25px;
+}
+.rating {
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  width: 668px;
+}
+.course-rating {
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: #f3ca8c;
+  font-size: 14px;
+}
+
+.course-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3ca8c;
+  font-weight: bolder;
+  margin-right: 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.rating a {
+  color: #c6bdde;
+  font-weight: bolder;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.course-students {
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 1080px) {
+  .top-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #1c1d1f;
+    box-shadow: 8px 8px 8px 12px rgba(0, 0, 0, 0.2),
+      10px 8px 8px 8px rgba(0, 0, 0, 0.19);
+    width: 100%;
+  }
+  .order-button-box {
+    background-color: #1c1d1f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    width: 100%;
+  }
+  .order-button span {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: large;
+  }
+  .order-button button {
+    width: 90px;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+  }
+  .order-button button:hover {
+    background-color: rgb(237, 236, 236);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    color: white;
+    margin: 15px 0 2px 25px;
+  }
+
+  .title h6 {
+    width: 100%;
+    white-space: nowrap;
+    font-weight: bolder;
+    margin: 0;
+  }
+  .rating-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-left: 25px;
+  }
+  .rating {
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  .top-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: white;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2),
+      8px 8px 8px 8px rgba(0, 0, 0, 0.19);
+    width: 100%;
+  }
+  .order-button-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px 0 20px;
+    width: 100%;
+  }
+  .order-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    width: 100%;
+  }
+  .order-button span {
+    width: 20%;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+  }
+  .order-button button {
+    width: 80%;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(39, 39, 39);
+    color: white;
+  }
+  .order-button button:hover {
+    background-color: black;
+  }
+  .title-box {
+    display: none;
+  }
+}

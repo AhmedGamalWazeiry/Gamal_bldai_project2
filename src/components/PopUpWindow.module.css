@@ -1,0 +1,90 @@
+.pop-up-window {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 330px;
+  border: 1px solid#c3c3c3;
+  -webkit-box-shadow: 0 0 10px rgb(59, 59, 59);
+  box-shadow: 0 0 10px rgb(94, 94, 94);
+  padding: 25px;
+  z-index: 2;
+}
+
+.pop-up-window h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.updated {
+  font-size: 13px;
+  color: rgb(0, 129, 11);
+}
+.info {
+  font-size: 13px;
+  color: slategray;
+  margin: 10px 0;
+}
+.headline {
+  font-size: 14px;
+}
+.pop-up-window ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 300px;
+  list-style-type: none;
+  margin-top: 10px;
+}
+.pop-up-window ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px 0 0 -37px;
+  width: 100%;
+}
+.item-icon {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.item-text {
+  width: 100%;
+  font-size: 15px;
+}
+.cart-like-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-cart {
+  width: 215px;
+  height: 50px;
+  background-color: #983cda;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.5px solid black;
+  width: 50px;
+  height: 50px;
+}
+.like-button i {
+  font-weight: bold;
+  font-size: 20px;
+}
+.loader {
+  width: 22px;
+  height: 22px;
+  color: black;
+}
+.loader-hide {
+  display: none;
+}

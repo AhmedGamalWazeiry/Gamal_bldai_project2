@@ -21,6 +21,7 @@ function SetStars(rating) {
 // This function returns a list of Courses components.
 
 function getCoursesComponents(coursesList) {
+  console.log(coursesList.length);
   let courses = [];
   courses = coursesList.map((course) => (
     <Course key={course.id} course={course} />

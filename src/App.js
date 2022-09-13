@@ -1,24 +1,32 @@
+import React, { useState, useEffect } from "react";
+import { getData } from "./components/ExtractData";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import CoursesList from "./components/CoursesList";
-import { getCourses, getDescription, getTitle } from "./components/db";
+import HomePage from "./components/HomePage/HomePage";
+import CoursePage from "./components/CoursePage/CoursePage";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
-  // Get array of courses from db.js file.
-  const coursesList = getCourses();
+  const [courses, setCourses] = useState({});
 
-  // Get  courses List Description  from db.js file.
-  const coursesDescription = getDescription();
-
-  // Get courses List Title from db.js file.
-  const coursesTitle = getTitle();
+  useEffect(() => {
+    fetch("http://localhost:3000/content")
+      .then((res) => res.json())
+      .then((res) => {
+        setCourses(getData(res));
+      });
+  }, []);
 
   return (
     <div className="App">
-      <CoursesList
-        coursesList={coursesList}
-        coursesDescription={coursesDescription}
-        coursesTitle={coursesTitle}
-      />
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<HomePage courses={courses} />} />
+        <Route
+          path="/course/:courseTitle"
+          element={<CoursePage courses={courses} />}
+        />
+      </Routes>
     </div>
   );
 }
